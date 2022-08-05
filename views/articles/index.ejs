@@ -25,6 +25,14 @@
             <%= article.createdAt.toLocaleDateString() %>
           </div>
           <div class="cardDescription"><%= article.description %></div>
+          <a href="articles/<%= article.slug %>" class="readMore">Read more</a>
+          <a href="articles/edit/<%= article.id %>" class="editButton">Edit</a>
+          <form
+            action="/articles<%= article.id %>?_method=DELETE"
+            method="POST"
+          >
+            <button type="submit" class="deleteButton">Delete</button>
+          </form>
         </div>
       </div>
       <% })%>

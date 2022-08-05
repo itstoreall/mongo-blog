@@ -1,1 +1,31 @@
-sdvsdvsvs sss
+<!-- Title -->
+<div class="'formGroup">
+  <label for="title">Title</label>
+  <input
+    class="formInput"
+    value="<%= article.title %>"
+    type="text"
+    name="title"
+    id="title"
+    required
+  />
+</div>
+
+<!-- Description -->
+<div class="'formGroup">
+  <label for="description">Description</label>
+  <textarea class="formInput" name="description" id="description">
+<%= article.description %></textarea
+  >
+</div>
+
+<!-- Markdown -->
+<div class="'formGroup">
+  <label for="markdown">Markdown</label>
+  <textarea class="formInput" name="markdown" id="markdown" required>
+<%= article.markdown %></textarea
+  >
+</div>
+
+<a href="/" class="formCancel">Cancel</a>
+<button class="formButton" type="submit">Save</button>
